@@ -148,14 +148,24 @@ export default function Contact() {
           <FadeIn>
             <div className="rounded-2xl overflow-hidden gold-border">
               <iframe
-                title="Bharath Fencing service area — Salem"
-                src="https://www.google.com/maps?q=Salem,Tamil+Nadu&output=embed"
+                title="Bharath Fencing — exact location"
+                src="https://www.google.com/maps?q=8.5111758,77.5867109&z=17&output=embed"
                 width="100%"
                 height="380"
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
+              <div className="mt-3 text-center">
+                <a
+                  href="https://www.google.com/maps/place/Bharath+fenching+(company)/@8.5111758,77.584136,17z/data=!3m1!4b1!4m6!3m5!1s0x3b046900024be14f:0x933a8918f38c9c3c!8m2!3d8.5111758!4d77.5867109"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm gold-text hover:underline"
+                >
+                  Open in Google Maps →
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>
