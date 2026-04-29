@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Mountain, Square, Fence, DoorOpen, Shield, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FadeIn } from "@/components/site/FadeIn";
