@@ -92,13 +92,32 @@
 @layer components {
   .gold-border { @apply border border-[hsl(var(--gold)/0.3)]; }
   .gold-text { color: hsl(var(--gold)); }
+  .gold-shimmer {
+    background: linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 25%, #fff5c2 50%, hsl(var(--gold-light)) 75%, hsl(var(--gold)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
   .btn-gold {
     @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-semibold transition-all;
     background: var(--gradient-gold);
     color: hsl(var(--primary-foreground));
     box-shadow: var(--shadow-gold);
+    position: relative;
+    overflow: hidden;
   }
   .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.1); }
+  .btn-gold::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+    transform: translateX(-100%);
+    animation: btn-sheen 3.5s ease-in-out infinite;
+    pointer-events: none;
+  }
   .btn-outline-gold {
     @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-semibold transition-all border-2;
     border-color: hsl(var(--gold));
@@ -114,7 +133,48 @@
     @apply rounded-xl bg-card p-6 gold-border transition-all;
     box-shadow: var(--shadow-card);
   }
-  .card-dark:hover { border-color: hsl(var(--gold) / 0.7); transform: translateY(-4px); }
+  .card-dark:hover { border-color: hsl(var(--gold) / 0.7); transform: translateY(-6px); box-shadow: var(--shadow-gold); }
   .section-padding { @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8; }
   .container-max { @apply max-w-7xl mx-auto; }
+  .ken-burns { animation: ken-burns 20s ease-in-out infinite alternate; }
+  .float-slow { animation: float 6s ease-in-out infinite; }
+  .pulse-ring {
+    position: relative;
+  }
+  .pulse-ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 hsl(var(--gold) / 0.6);
+    animation: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    pointer-events: none;
+  }
+  .hover-lift { @apply transition-transform duration-300; }
+  .hover-lift:hover { transform: translateY(-4px) scale(1.02); }
+  .icon-spin-slow { animation: spin 12s linear infinite; }
+  .icon-bounce-hover { transition: transform 0.3s ease; }
+  .group:hover .icon-bounce-hover { transform: translateY(-4px) rotate(-6deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes btn-sheen {
+  0% { transform: translateX(-100%); }
+  60%, 100% { transform: translateX(100%); }
+}
+@keyframes ken-burns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-2%, -2%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 hsl(var(--gold) / 0.55); }
+  70% { box-shadow: 0 0 0 14px hsl(var(--gold) / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(var(--gold) / 0); }
 }

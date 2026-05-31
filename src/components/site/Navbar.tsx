@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container-max flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="text-xl font-extrabold gold-text tracking-tight">
+        <Link to="/" className="text-xl font-extrabold gold-shimmer tracking-tight">
           {BUSINESS.name}
         </Link>
         <nav className="hidden md:flex items-center gap-8">

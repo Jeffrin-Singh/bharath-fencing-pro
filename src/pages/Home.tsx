@@ -53,7 +53,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Sturdy fence protecting farmland in Tamil Nadu" className="w-full h-full object-cover" width={1920} height={1080} />
+          <img src={hero} alt="Sturdy fence protecting farmland in Tamil Nadu" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
         </div>
         <div className="relative container-max px-4 sm:px-6 lg:px-8 py-20">
@@ -67,13 +67,13 @@ export default function Home() {
               By {BUSINESS.owner} — Fencing Expert
             </span>
             <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Protect Your Land with <span className="gold-text">Reliable Fencing</span> Solutions
+              Protect Your Land with <span className="gold-shimmer">Reliable Fencing</span> Solutions
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
               Stone, cement, wire & gate installation across Tamil Nadu — trusted by 500+ landowners.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href={BUSINESS.tel} className="btn-gold">
+              <a href={BUSINESS.tel} className="btn-gold pulse-ring">
                 <Phone className="w-4 h-4" /> Call Now
               </a>
               <a href={BUSINESS.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="container-max px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <FadeIn key={s.label} delay={i * 0.08} className="flex items-center gap-3">
-              <s.icon className="w-8 h-8 gold-text shrink-0" />
+              <s.icon className="w-8 h-8 gold-text shrink-0 float-slow" style={{ animationDelay: `${i * 0.3}s` }} />
               <div>
                 <div className="text-2xl font-extrabold">{s.value}</div>
                 <div className="text-xs text-muted-foreground">{s.label}</div>
@@ -112,8 +112,8 @@ export default function Home() {
           <StaggerGrid className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(s => (
               <StaggerItem key={s.title}>
-                <div className="card-dark h-full flex flex-col">
-                  <s.icon className="w-10 h-10 gold-text" />
+                <div className="card-dark h-full flex flex-col group">
+                  <s.icon className="w-10 h-10 gold-text icon-bounce-hover" />
                   <h3 className="text-xl font-bold mt-4">{s.title}</h3>
                   <p className="text-sm text-muted-foreground mt-2 flex-1">{s.desc}</p>
                   <Link to="/services" className="mt-4 text-sm font-semibold gold-text hover:underline">
@@ -187,7 +187,9 @@ export default function Home() {
           <StaggerGrid className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3">
             {galleryImgs.map((img, i) => (
               <StaggerItem key={i}>
-                <img src={img} alt={`Fencing project ${i + 1}`} loading="lazy" width={1024} height={768} className="aspect-[4/3] object-cover w-full rounded-lg gold-border hover:opacity-90 transition" />
+                <div className="overflow-hidden rounded-lg gold-border">
+                  <img src={img} alt={`Fencing project ${i + 1}`} loading="lazy" width={1024} height={768} className="aspect-[4/3] object-cover w-full transition-transform duration-700 hover:scale-110" />
+                </div>
               </StaggerItem>
             ))}
           </StaggerGrid>
