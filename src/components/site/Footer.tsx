@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
-const logo = { url: "/logo.png" };
 
 export default function Footer() {
   return (
     <footer className="bg-card border-t border-border mt-16">
       <div className="container-max px-4 sm:px-6 lg:px-8 py-12 grid gap-8 md:grid-cols-4">
         <div>
-          <img src={logo.url} alt={`${BUSINESS.name} logo`} className="h-14 w-auto mb-3" />
+          <img src="/logo.png" alt={`${BUSINESS.name} logo`} className="block h-14 w-auto object-contain mb-3" />
           <p className="text-sm text-muted-foreground mt-3">
             Trusted fencing solutions across Tamil Nadu since 2014. Owned by {BUSINESS.owner}.
           </p>
