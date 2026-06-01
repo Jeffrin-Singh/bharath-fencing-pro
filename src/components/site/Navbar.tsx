@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
+import logo from "@/assets/bharath-fencing-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -16,8 +17,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container-max flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="text-xl font-extrabold gold-shimmer tracking-tight">
-          {BUSINESS.name}
+        <Link to="/" className="flex items-center gap-2" aria-label={BUSINESS.name}>
+          <img src={logo.url} alt={`${BUSINESS.name} logo`} className="h-10 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l => (
