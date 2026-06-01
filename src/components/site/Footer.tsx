@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
-import logo from "@/assets/bharath-fencing-logo.png.asset.json";
+const logo = { url: "/logo.png" };
 
 export default function Footer() {
   return (
