@@ -83,14 +83,14 @@ export default function Gallery() {
             ))}
           </div>
 
-          <StaggerGrid className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
+          <StaggerGrid key={filter} className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
             {filtered.map(item => (
               <StaggerItem key={item.id} className="mb-4 break-inside-avoid">
                 <button
                   onClick={() => setLightbox(item.image_url)}
                   className="group relative block w-full overflow-hidden rounded-xl gold-border"
                 >
-                  <img src={item.image_url} alt={item.category} loading="lazy" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={item.image_url} alt={item.category} loading="lazy" className="gallery-image w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <span className="text-xs font-semibold gold-text uppercase tracking-wider">{item.category}</span>
                   </div>
