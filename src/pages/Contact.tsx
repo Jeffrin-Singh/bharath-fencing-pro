@@ -9,11 +9,13 @@ import { supabase } from "@/lib/supabase";
 const schema = z.object({
   name: z.string().trim().min(2, "Name is required").max(100),
   phone: z.string().trim().regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit Indian mobile number"),
+  location: z.string().trim().min(2, "Location is required").max(100),
+  fenceType: z.enum(["Stone", "Cement", "Wire", "Gate"], { errorMap: () => ({ message: "Select fencing type" }) }),
   message: z.string().trim().min(5, "Please enter a message").max(1000),
 });
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", location: "", fenceType: "" as "" | "Stone" | "Cement" | "Wire" | "Gate", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
 
@@ -29,10 +31,12 @@ export default function Contact() {
     }
     setLoading(true);
     try {
-      const { error } = await supabase.from("contacts").insert(parsed.data);
+      const { name, phone, message, location, fenceType } = parsed.data;
+      const composed = `Location: ${location}\nFencing Type: ${fenceType}\n\n${message}`;
+      const { error } = await supabase.from("contacts").insert({ name, phone, message: composed });
       if (error) throw error;
       toast.success("We'll contact you within 2 hours! ✅");
-      setForm({ name: "", phone: "", message: "" });
+      setForm({ name: "", phone: "", location: "", fenceType: "", message: "" });
     } catch (err) {
       console.error(err);
       toast.error("Something went wrong. Please try calling us directly.");
