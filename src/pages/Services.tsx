@@ -54,7 +54,7 @@ export default function Services() {
           <FadeIn>
             <h1 className="text-4xl sm:text-5xl font-extrabold">Our <span className="gold-text">Services</span></h1>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              From stone walls to electric gates — we offer end-to-end fencing for every land type across Tamil Nadu.
+              From stone walls to electric gates — we offer end-to-end fencing for every land type in Kalakad, Tamil Nadu.
             </p>
           </FadeIn>
         </div>

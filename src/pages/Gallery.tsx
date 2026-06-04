@@ -59,7 +59,7 @@ export default function Gallery() {
           <FadeIn>
             <h1 className="text-4xl sm:text-5xl font-extrabold">Our <span className="gold-text">Work</span></h1>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Real fencing projects completed across Tamil Nadu.
+              Real fencing projects completed in and around Kalakad, Tamil Nadu.
             </p>
           </FadeIn>
         </div>
