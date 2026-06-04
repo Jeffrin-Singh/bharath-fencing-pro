@@ -18,7 +18,7 @@ export default function About() {
           <FadeIn>
             <h1 className="text-4xl sm:text-5xl font-extrabold">About <span className="gold-text">Bharath Fencing</span></h1>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Built in Tamil Nadu, for Tamil Nadu. Helping farmers and landowners protect what matters.
+              Based in Kalakad, Tamil Nadu. Helping local farmers and landowners protect what matters.
             </p>
           </FadeIn>
         </div>
@@ -29,15 +29,15 @@ export default function About() {
           <FadeIn>
             <h2 className="text-3xl font-extrabold">Our <span className="gold-text">Story</span></h2>
             <p className="mt-4 text-muted-foreground">
-              {BUSINESS.name} was founded by {BUSINESS.owner} in 2014 with a simple mission: help Tamil Nadu's
+              {BUSINESS.name} was founded by {BUSINESS.owner} in 2014 in Kalakad with a simple mission: help local
               farmers protect their land with reliable, affordable fencing. After years of seeing landowners
               suffer from boundary disputes, livestock damage and encroachment, Ravi started this business to
               offer end-to-end fencing services — done right, the first time.
             </p>
             <p className="mt-3 text-muted-foreground">
-              Today we've completed 500+ projects across Salem, Erode, Namakkal, Coimbatore and beyond — from
-              small house plots to 50+ acre farms. Our team is local, our materials are local, and our
-              commitment to every customer is the same: do quality work that lasts.
+              Today we've completed 500+ projects in and around Kalakad — from small house plots to 50+ acre
+              farms. Our team is local, our materials are local, and our commitment to every customer is the
+              same: do quality work that lasts.
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -48,7 +48,7 @@ export default function About() {
               <h3 className="mt-4 text-xl font-bold text-center">{BUSINESS.owner}</h3>
               <p className="text-center gold-text text-sm font-semibold">Founder & Fencing Expert</p>
               <p className="mt-3 text-sm text-muted-foreground text-center">
-                10+ years experience in farm and residential fencing across Tamil Nadu.
+                10+ years experience in farm and residential fencing in Kalakad, Tamil Nadu.
               </p>
             </div>
           </FadeIn>
@@ -58,8 +58,8 @@ export default function About() {
       <section className="section-padding bg-card border-y border-border">
         <div className="container-max">
           <FadeIn className="text-center">
-            <h2 className="text-3xl font-extrabold">Service <span className="gold-text">Areas</span></h2>
-            <p className="mt-3 text-muted-foreground">We serve the following districts across Tamil Nadu.</p>
+            <h2 className="text-3xl font-extrabold">Our <span className="gold-text">Location</span></h2>
+            <p className="mt-3 text-muted-foreground">Based in Kalakad, Tamil Nadu — our only branch.</p>
           </FadeIn>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {BUSINESS.areas.map(a => (

@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <img src="/logo.png" alt={`${BUSINESS.name} logo`} className="block h-14 w-auto object-contain mb-3" />
           <p className="text-sm text-muted-foreground mt-3">
-            Trusted fencing solutions across Tamil Nadu since 2014. Owned by {BUSINESS.owner}.
+            Trusted fencing solutions in Kalakad, Tamil Nadu since 2014. Owned by {BUSINESS.owner}.
           </p>
         </div>
         <div>

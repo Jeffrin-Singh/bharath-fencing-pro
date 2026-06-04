@@ -36,9 +36,9 @@ const why = [
 ];
 
 const testimonials = [
-  { name: "Murugan S.", place: "Salem", text: "Ravi sir and his team fenced my 3-acre farm in just 4 days. Very neat work and fair pricing." },
-  { name: "Lakshmi P.", place: "Erode", text: "We had a land dispute issue. Bharath Fencing did proper survey and stone fencing. Problem solved!" },
-  { name: "Karthik R.", place: "Namakkal", text: "Best gate installation I've seen in our area. Strong material and on-time work. Highly recommend." },
+  { name: "Murugan S.", place: "Kalakad", text: "Ravi sir and his team fenced my 3-acre farm in just 4 days. Very neat work and fair pricing." },
+  { name: "Lakshmi P.", place: "Nanguneri", text: "We had a land dispute issue. Bharath Fencing did proper survey and stone fencing. Problem solved!" },
+  { name: "Karthik R.", place: "Valliyoor", text: "Best gate installation I've seen in our area. Strong material and on-time work. Highly recommend." },
 ];
 
 const galleryImgs = [gStone, gCement, gChain, gGate, gLand, gInstall];
@@ -53,7 +53,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Sturdy fence protecting farmland in Tamil Nadu" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
+          <img src={hero} alt="Sturdy fence protecting farmland in Kalakad, Tamil Nadu" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
         </div>
         <div className="relative container-max px-4 sm:px-6 lg:px-8 py-20">
@@ -70,7 +70,7 @@ export default function Home() {
               Protect Your Land with <span className="gold-shimmer">Reliable Fencing</span> Solutions
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              Stone, cement, wire & gate installation across Tamil Nadu — trusted by 500+ landowners.
+              Stone, cement, wire & gate installation in Kalakad, Tamil Nadu — trusted by 500+ landowners.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={BUSINESS.tel} className="btn-gold pulse-ring">
@@ -132,7 +132,7 @@ export default function Home() {
           <FadeIn>
             <h2 className="text-3xl sm:text-4xl font-extrabold">Why Choose <span className="gold-text">Bharath Fencing</span>?</h2>
             <p className="mt-4 text-muted-foreground">
-              We've helped 500+ landowners across Tamil Nadu protect their property with durable fencing built to last.
+              We've helped 500+ landowners in and around Kalakad protect their property with durable fencing built to last.
             </p>
             <ul className="mt-6 space-y-3">
               {why.map(w => (
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="mt-8"><CTAButtons /></div>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <img src={gLand} alt="Long perimeter fence across Tamil Nadu farmland" loading="lazy" width={1024} height={768} className="rounded-2xl gold-border w-full" />
+            <img src={gLand} alt="Long perimeter fence on farmland near Kalakad, Tamil Nadu" loading="lazy" width={1024} height={768} className="rounded-2xl gold-border w-full" />
           </FadeIn>
         </div>
       </section>
@@ -182,7 +182,7 @@ export default function Home() {
         <div className="container-max">
           <FadeIn className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-extrabold">Recent <span className="gold-text">Projects</span></h2>
-            <p className="mt-3 text-muted-foreground">A few of our completed fencing jobs across Tamil Nadu.</p>
+            <p className="mt-3 text-muted-foreground">A few of our completed fencing jobs in and around Kalakad.</p>
           </FadeIn>
           <StaggerGrid className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3">
             {galleryImgs.map((img, i) => (
