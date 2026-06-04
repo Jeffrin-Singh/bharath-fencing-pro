@@ -209,6 +209,16 @@ export default function Home() {
                 Get a free quote today. Call or WhatsApp us and we'll visit your site within 24 hours.
               </p>
               <div className="mt-8 flex justify-center"><CTAButtons /></div>
+              <div className="mt-6 flex justify-center">
+                <a
+                  href="https://www.google.com/maps/place/Bharath+fenching+(company)/@8.5111758,77.5867109,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline-gold"
+                >
+                  <MapPin className="w-4 h-4" /> View on Google Business Profile
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>
