@@ -129,6 +129,31 @@ export default function Contact() {
                 {errors.phone && <p className="text-xs text-destructive mt-1">{errors.phone}</p>}
               </div>
               <div>
+                <label className="text-sm font-medium">Location *</label>
+                <input
+                  value={form.location}
+                  onChange={e => setForm({ ...form, location: e.target.value })}
+                  className="mt-1 w-full bg-secondary rounded-lg px-3 py-2.5 outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]"
+                  placeholder="e.g. Salem, Tamil Nadu"
+                />
+                {errors.location && <p className="text-xs text-destructive mt-1">{errors.location}</p>}
+              </div>
+              <div>
+                <label className="text-sm font-medium">Type of Fencing *</label>
+                <select
+                  value={form.fenceType}
+                  onChange={e => setForm({ ...form, fenceType: e.target.value as typeof form.fenceType })}
+                  className="mt-1 w-full bg-secondary rounded-lg px-3 py-2.5 outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]"
+                >
+                  <option value="">Select fencing type</option>
+                  <option value="Stone">Stone Fencing</option>
+                  <option value="Cement">Cement Pole Fencing</option>
+                  <option value="Wire">Wire / Chain-Link Fencing</option>
+                  <option value="Gate">Gate Installation</option>
+                </select>
+                {errors.fenceType && <p className="text-xs text-destructive mt-1">{errors.fenceType}</p>}
+              </div>
+              <div>
                 <label className="text-sm font-medium">Message *</label>
                 <textarea
                   rows={4}
