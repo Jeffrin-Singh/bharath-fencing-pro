@@ -17,7 +17,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container-max flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex h-12 shrink-0 items-center gap-2 overflow-visible" aria-label={BUSINESS.name}>
-          <img src="/logo.png" alt={`${BUSINESS.name} logo`} className="block h-[48px] w-auto max-w-[180px] object-contain" />
+          <img src="/logo.png" alt="Bharath Fencing Logo Kalakad" width={180} height={48} className="block h-[48px] w-auto max-w-[180px] object-contain" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l => (
