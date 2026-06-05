@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-card border-t border-border mt-16">
       <div className="container-max px-4 sm:px-6 lg:px-8 py-12 grid gap-8 md:grid-cols-4">
         <div>
-          <img src="/logo.png" alt={`${BUSINESS.name} logo`} className="block h-14 w-auto object-contain mb-3" />
+          <img src="/logo.png" alt="Bharath Fencing Logo Kalakad" width={56} height={56} className="block h-14 w-auto object-contain mb-3" />
           <p className="text-sm text-muted-foreground mt-3">
             Trusted fencing solutions in Kalakad, Tamil Nadu since 2014. Owned by {BUSINESS.owner}.
           </p>
@@ -37,8 +37,11 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">{BUSINESS.hours}</p>
         </div>
       </div>
-      <div className="border-t border-border py-4 text-center text-xs text-muted-foreground">
-        © 2025 {BUSINESS.name}. All rights reserved.
+      <div className="border-t border-border py-4 px-4 text-center text-xs text-muted-foreground space-y-2">
+        <p className="max-w-4xl mx-auto">
+          Bharath Fencing — Best fencing services in Kalakad, Tirunelveli district, Tamil Nadu. We provide stone fencing, wire fencing, cement fencing and gate installation. Serving Kalakad, Ambasamudram, Nanguneri, Cheranmahadevi and all areas of Tirunelveli district. Contact: 9944106978
+        </p>
+        <p>© 2025 {BUSINESS.name}. All rights reserved.</p>
       </div>
     </footer>
   );
