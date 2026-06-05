@@ -14,11 +14,11 @@ import gLand from "@/assets/gallery/land-fence.jpg";
 import gInstall from "@/assets/gallery/installation.jpg";
 
 const services = [
-  { icon: Mountain, title: "Stone Fencing", desc: "Permanent stone borders for farmland and village plots." },
-  { icon: Square, title: "Cement Pole Fencing", desc: "Strong concrete posts for long agricultural perimeters." },
-  { icon: Fence, title: "Chain-Link / Wire Fencing", desc: "Affordable wire mesh for plots, schools and farms." },
-  { icon: DoorOpen, title: "Gate Installation", desc: "Custom main gates, farm gates and sliding gates." },
-  { icon: Shield, title: "Land Protection", desc: "Survey-based fencing to prevent disputes." },
+  { icon: Mountain, title: "Stone Fencing in Kalakad", desc: "Permanent stone borders for farmland and village plots in Kalakad, Tirunelveli." },
+  { icon: Fence, title: "Wire Fencing in Tirunelveli", desc: "Affordable wire mesh and chain-link fencing across Tirunelveli district." },
+  { icon: Square, title: "Cement Fencing Tirunelveli District", desc: "Strong concrete pole fencing for long agricultural perimeters." },
+  { icon: DoorOpen, title: "Gate Installation Kalakad", desc: "Custom main gates, farm gates and sliding gates in Kalakad." },
+  { icon: Shield, title: "Land Fencing Tirunelveli District", desc: "Survey-based land fencing to mark and protect your boundaries." },
 ];
 
 const stats = [
@@ -53,7 +53,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Sturdy fence protecting farmland in Kalakad, Tamil Nadu" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
+          <img src={hero} alt="Best Fencing Services Kalakad Tirunelveli" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
         </div>
         <div className="relative container-max px-4 sm:px-6 lg:px-8 py-20">
@@ -67,7 +67,7 @@ export default function Home() {
               By {BUSINESS.owner} — Fencing Expert
             </span>
             <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Protect Your Land with <span className="gold-shimmer">Reliable Fencing</span> Solutions
+              Best <span className="gold-shimmer">Fencing Services</span> in Kalakad, Tirunelveli
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
               Stone, cement, wire & gate installation in Kalakad, Tamil Nadu — trusted by 500+ landowners.
@@ -107,7 +107,7 @@ export default function Home() {
         <div className="container-max">
           <FadeIn className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-extrabold">Our <span className="gold-text">Services</span></h2>
-            <p className="mt-3 text-muted-foreground">Comprehensive fencing solutions for every type of land and need.</p>
+            <p className="mt-3 text-muted-foreground">Stone, wire, cement and gate fencing across Kalakad and Tirunelveli district.</p>
           </FadeIn>
           <StaggerGrid className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(s => (
@@ -130,7 +130,7 @@ export default function Home() {
       <section className="section-padding bg-card border-y border-border">
         <div className="container-max grid lg:grid-cols-2 gap-12 items-center">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-extrabold">Why Choose <span className="gold-text">Bharath Fencing</span>?</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold">Why Choose Bharath Fencing?</h2>
             <p className="mt-4 text-muted-foreground">
               We've helped 500+ landowners in and around Kalakad protect their property with durable fencing built to last.
             </p>
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="mt-8"><CTAButtons /></div>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <img src={gLand} alt="Long perimeter fence on farmland near Kalakad, Tamil Nadu" loading="lazy" width={1024} height={768} className="rounded-2xl gold-border w-full" />
+            <img src={gLand} alt="wire fencing land kalakad" loading="lazy" width={1024} height={768} className="rounded-2xl gold-border w-full" />
           </FadeIn>
         </div>
       </section>
@@ -181,17 +181,27 @@ export default function Home() {
       <section className="section-padding bg-card border-y border-border">
         <div className="container-max">
           <FadeIn className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-extrabold">Recent <span className="gold-text">Projects</span></h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold">Our Work <span className="gold-text">Gallery</span></h2>
             <p className="mt-3 text-muted-foreground">A few of our completed fencing jobs in and around Kalakad.</p>
           </FadeIn>
           <StaggerGrid className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3">
-            {galleryImgs.map((img, i) => (
-              <StaggerItem key={i}>
-                <div className="overflow-hidden rounded-lg gold-border">
-                  <img src={img} alt={`Fencing project ${i + 1}`} loading="lazy" width={1024} height={768} className="aspect-[4/3] object-cover w-full transition-transform duration-700 hover:scale-110" />
-                </div>
-              </StaggerItem>
-            ))}
+            {galleryImgs.map((img, i) => {
+              const alts = [
+                "stone fencing kalakad tirunelveli",
+                "cement fencing tirunelveli district",
+                "wire fencing land kalakad",
+                "gate installation kalakad tamil nadu",
+                "residential fencing kalakad",
+                "commercial fencing tirunelveli",
+              ];
+              return (
+                <StaggerItem key={i}>
+                  <div className="overflow-hidden rounded-lg gold-border">
+                    <img src={img} alt={alts[i]} loading="lazy" width={1024} height={768} className="aspect-[4/3] object-cover w-full transition-transform duration-700 hover:scale-110" />
+                  </div>
+                </StaggerItem>
+              );
+            })}
           </StaggerGrid>
           <div className="mt-8 text-center">
             <Link to="/gallery" className="btn-outline-gold">View All Projects</Link>
@@ -204,7 +214,7 @@ export default function Home() {
         <div className="container-max">
           <FadeIn>
             <div className="rounded-2xl p-10 md:p-16 text-center" style={{ background: "hsl(var(--card))", border: "2px solid hsl(var(--gold))" }}>
-              <h2 className="text-3xl sm:text-4xl font-extrabold">Ready to Fence Your <span className="gold-text">Land</span>?</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold">Contact <span className="gold-text">Us</span></h2>
               <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
                 Get a free quote today. Call or WhatsApp us and we'll visit your site within 24 hours.
               </p>
