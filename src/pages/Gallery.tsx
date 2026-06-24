@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { X } from "lucide-react";
-import { FadeIn, StaggerGrid, StaggerItem } from "@/components/site/FadeIn";
+import { FadeIn } from "@/components/site/FadeIn";
 import { supabase } from "@/lib/supabase";
 import gStone from "@/assets/gallery/stone-fence.jpg";
 import gCement from "@/assets/gallery/cement-pole.jpg";
@@ -12,19 +13,20 @@ import gInstall from "@/assets/gallery/installation.jpg";
 
 type Item = { id: string; image_url: string; category: string };
 
-const FALLBACK: Item[] = [
-  { id: "f1", image_url: gStone, category: "Land Fencing" },
-  { id: "f2", image_url: gCement, category: "Land Fencing" },
-  { id: "f3", image_url: gChain, category: "Residential" },
-  { id: "f4", image_url: gGate, category: "Commercial" },
-  { id: "f5", image_url: gLand, category: "Land Fencing" },
-  { id: "f6", image_url: gInstall, category: "Land Fencing" },
-  { id: "f7", image_url: gStone, category: "Residential" },
-  { id: "f8", image_url: gCement, category: "Commercial" },
-  { id: "f9", image_url: gChain, category: "Residential" },
-  { id: "f10", image_url: gGate, category: "Residential" },
-  { id: "f11", image_url: gLand, category: "Land Fencing" },
-  { id: "f12", image_url: gInstall, category: "Commercial" },
+type FB = Item & { alt: string };
+const FALLBACK: FB[] = [
+  { id: "f1", image_url: gStone, category: "Land Fencing", alt: "Stone fencing installation on farmland in Kalakad by Bharath Fencing" },
+  { id: "f2", image_url: gCement, category: "Land Fencing", alt: "Cement pole fencing along agricultural boundary in Tirunelveli district" },
+  { id: "f3", image_url: gChain, category: "Residential", alt: "Chain-link wire fencing around a residential plot in Kalakad" },
+  { id: "f4", image_url: gGate, category: "Commercial", alt: "Custom metal gate installation for a commercial property in Tirunelveli" },
+  { id: "f5", image_url: gLand, category: "Land Fencing", alt: "Survey-based land fencing protecting farmland near Kalakad" },
+  { id: "f6", image_url: gInstall, category: "Land Fencing", alt: "Bharath Fencing team installing fence posts on village land in Tamil Nadu" },
+  { id: "f7", image_url: gStone, category: "Residential", alt: "Stone boundary wall around a residential home in Kalakad" },
+  { id: "f8", image_url: gCement, category: "Commercial", alt: "Tall cement pole perimeter fencing for a commercial site in Tirunelveli" },
+  { id: "f9", image_url: gChain, category: "Residential", alt: "Galvanized chain-link fence for a house plot in Nanguneri" },
+  { id: "f10", image_url: gGate, category: "Residential", alt: "Sliding compound gate installation for a Kalakad residence" },
+  { id: "f11", image_url: gLand, category: "Land Fencing", alt: "Long agricultural wire fence run completed in Tirunelveli district" },
+  { id: "f12", image_url: gInstall, category: "Commercial", alt: "Commercial fencing project handover in Ambasamudram by Bharath Fencing" },
 ];
 
 const FILTERS = ["All", "Land Fencing", "Residential", "Commercial"] as const;
@@ -54,6 +56,13 @@ export default function Gallery() {
 
   return (
     <div>
+      <Helmet>
+        <title>Fencing Project Gallery in Kalakad, Tirunelveli</title>
+        <meta name="description" content="Photos of stone, wire, cement & gate fencing projects completed by Bharath Fencing in Kalakad and across Tirunelveli district." />
+        <link rel="canonical" href="https://bharathfenching.online/gallery" />
+        <meta property="og:title" content="Fencing Project Gallery in Kalakad, Tirunelveli" />
+        <meta property="og:url" content="https://bharathfenching.online/gallery" />
+      </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">
           <FadeIn>
@@ -83,21 +92,24 @@ export default function Gallery() {
             ))}
           </div>
 
-          <StaggerGrid key={filter} className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
-            {filtered.map(item => (
-              <StaggerItem key={item.id} className="mb-4 break-inside-avoid">
-                <button
-                  onClick={() => setLightbox(item.image_url)}
-                  className="group relative block w-full overflow-hidden rounded-xl gold-border"
-                >
-                  <img src={item.image_url} alt={item.category} loading="lazy" className="gallery-image w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <span className="text-xs font-semibold gold-text uppercase tracking-wider">{item.category}</span>
-                  </div>
-                </button>
-              </StaggerItem>
-            ))}
-          </StaggerGrid>
+          <div key={filter} className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
+            {filtered.map(item => {
+              const alt = (item as FB).alt ?? `${item.category} fencing project in Kalakad, Tirunelveli by Bharath Fencing`;
+              return (
+                <div key={item.id} className="mb-4 break-inside-avoid gallery-item">
+                  <button
+                    onClick={() => setLightbox(item.image_url)}
+                    className="group relative block w-full overflow-hidden rounded-xl gold-border gallery-card"
+                  >
+                    <img src={item.image_url} alt={alt} loading="lazy" className="gallery-image w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                      <span className="text-xs font-semibold gold-text uppercase tracking-wider">{item.category}</span>
+                    </div>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
 
           {filtered.length === 0 && (
             <p className="text-center text-muted-foreground py-12">No images in this category yet.</p>
