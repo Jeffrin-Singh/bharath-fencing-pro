@@ -53,7 +53,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Best Fencing Services Kalakad Tirunelveli" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
+          <img src={hero} alt="Bharath Fencing team installing a stone and wire boundary fence on farmland in Kalakad, Tirunelveli" className="w-full h-full object-cover ken-burns" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
         </div>
         <div className="relative container-max px-4 sm:px-6 lg:px-8 py-20">
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="mt-8"><CTAButtons /></div>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <img src={gLand} alt="wire fencing land kalakad" loading="lazy" width={1024} height={768} className="rounded-2xl gold-border w-full" />
+            <img src={gLand} alt="Long wire fence run completed by Bharath Fencing across farmland near Kalakad" loading="lazy" width={1024} height={768} className="rounded-2xl gold-border w-full" />
           </FadeIn>
         </div>
       </section>
@@ -187,12 +187,12 @@ export default function Home() {
           <StaggerGrid className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3">
             {galleryImgs.map((img, i) => {
               const alts = [
-                "stone fencing kalakad tirunelveli",
-                "cement fencing tirunelveli district",
-                "wire fencing land kalakad",
-                "gate installation kalakad tamil nadu",
-                "residential fencing kalakad",
-                "commercial fencing tirunelveli",
+                "Granite stone boundary fence around a farm plot in Kalakad",
+                "Cement pole and barbed wire perimeter on agricultural land in Tirunelveli district",
+                "Galvanized chain-link wire fence around farmland in Kalakad village",
+                "Custom-fabricated metal entrance gate installed in Kalakad, Tamil Nadu",
+                "Residential plot boundary fencing completed in Kalakad town",
+                "Commercial perimeter fencing project handed over in Tirunelveli district",
               ];
               return (
                 <StaggerItem key={i}>
