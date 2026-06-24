@@ -1,6 +1,8 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { z } from "zod";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 import { FadeIn } from "@/components/site/FadeIn";
 import { BUSINESS } from "@/lib/business";
@@ -47,12 +49,19 @@ export default function Contact() {
 
   return (
     <div>
+      <Helmet>
+        <title>Contact Bharath Fencing — Kalakad, Tirunelveli</title>
+        <meta name="description" content="Call 9944106978 or message Bharath Fencing for a free fencing quote in Kalakad and Tirunelveli district. Site visit within 24 hours." />
+        <link rel="canonical" href="https://bharathfenching.online/contact" />
+        <meta property="og:title" content="Contact Bharath Fencing — Kalakad, Tirunelveli" />
+        <meta property="og:url" content="https://bharathfenching.online/contact" />
+      </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">
           <FadeIn>
-            <h1 className="text-4xl sm:text-5xl font-extrabold">Get in <span className="gold-text">Touch</span></h1>
+            <h1 className="text-4xl sm:text-5xl font-extrabold">Contact Bharath Fencing in <span className="gold-text">Kalakad, Tirunelveli</span></h1>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Tell us about your land — we'll get back within 2 hours.
+              Tell us about your land — we'll get back within 2 hours. New here? <Link to="/services" className="gold-text hover:underline">Browse our fencing services</Link> first.
             </p>
           </FadeIn>
         </div>
