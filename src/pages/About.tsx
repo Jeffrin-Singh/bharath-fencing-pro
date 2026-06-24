@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ShieldCheck, Award, Clock, IndianRupee, MapPin, User } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { FadeIn } from "@/components/site/FadeIn";
 import { BUSINESS } from "@/lib/business";
 
@@ -13,12 +14,19 @@ const values = [
 export default function About() {
   return (
     <div>
+      <Helmet>
+        <title>About Bharath Fencing — Kalakad Fencing Contractor</title>
+        <meta name="description" content="Bharath Fencing, founded by Ravi Kumar M in Kalakad, has served 500+ landowners across Tirunelveli district with stone, wire and gate fencing." />
+        <link rel="canonical" href="https://bharathfenching.online/about" />
+        <meta property="og:title" content="About Bharath Fencing — Kalakad Fencing Contractor" />
+        <meta property="og:url" content="https://bharathfenching.online/about" />
+      </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">
           <FadeIn>
-            <h1 className="text-4xl sm:text-5xl font-extrabold">About <span className="gold-text">Bharath Fencing</span></h1>
+            <h1 className="text-4xl sm:text-5xl font-extrabold">About <span className="gold-text">Bharath Fencing</span> — Kalakad, Tirunelveli</h1>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Based in Kalakad, Tamil Nadu. Helping local farmers and landowners protect what matters.
+              Based in Kalakad, Tirunelveli district. Helping local farmers and landowners protect what matters — see <Link to="/services" className="gold-text hover:underline">all our fencing services</Link>.
             </p>
           </FadeIn>
         </div>
