@@ -20,6 +20,7 @@ export default function About() {
         <link rel="canonical" href="https://bharathfenching.online/about" />
         <meta property="og:title" content="About Bharath Fencing — Kalakad Fencing Contractor" />
         <meta property="og:url" content="https://bharathfenching.online/about" />
+        <meta property="og:description" content="Founded by Ravi Kumar M in Kalakad, Bharath Fencing has completed 500+ stone, wire and gate fencing projects across Tirunelveli." />
       </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">

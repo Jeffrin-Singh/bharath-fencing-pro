@@ -55,6 +55,7 @@ export default function Contact() {
         <link rel="canonical" href="https://bharathfenching.online/contact" />
         <meta property="og:title" content="Contact Bharath Fencing — Kalakad, Tirunelveli" />
         <meta property="og:url" content="https://bharathfenching.online/contact" />
+        <meta property="og:description" content="Free fencing quotes in Kalakad and Tirunelveli district. Call Ravi Kumar on 9944106978 or send a message." />
       </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">

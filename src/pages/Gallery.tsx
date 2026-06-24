@@ -62,6 +62,7 @@ export default function Gallery() {
         <link rel="canonical" href="https://bharathfenching.online/gallery" />
         <meta property="og:title" content="Fencing Project Gallery in Kalakad, Tirunelveli" />
         <meta property="og:url" content="https://bharathfenching.online/gallery" />
+        <meta property="og:description" content="Browse real stone, wire, cement and gate fencing jobs completed by Bharath Fencing across Kalakad and Tirunelveli." />
       </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">

@@ -61,6 +61,16 @@ export default function Services() {
         <link rel="canonical" href="https://bharathfenching.online/services" />
         <meta property="og:title" content="Stone, Wire, Cement & Gate Fencing — Kalakad" />
         <meta property="og:url" content="https://bharathfenching.online/services" />
+        <meta property="og:description" content="Stone, wire, cement and gate fencing services across Kalakad and Tirunelveli district. Free site visit." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org","@type":"ItemList","itemListElement":[
+            {"@type":"Service","name":"Stone Fencing","areaServed":"Kalakad, Tirunelveli","provider":{"@type":"LocalBusiness","name":"Bharath Fencing","telephone":"+919944106978"}},
+            {"@type":"Service","name":"Cement Pole Fencing","areaServed":"Tirunelveli District","provider":{"@type":"LocalBusiness","name":"Bharath Fencing"}},
+            {"@type":"Service","name":"Chain-Link / Wire Fencing","areaServed":"Kalakad","provider":{"@type":"LocalBusiness","name":"Bharath Fencing"}},
+            {"@type":"Service","name":"Gate Installation","areaServed":"Kalakad","provider":{"@type":"LocalBusiness","name":"Bharath Fencing"}},
+            {"@type":"Service","name":"Land Protection Fencing","areaServed":"Tirunelveli District","provider":{"@type":"LocalBusiness","name":"Bharath Fencing"}}
+          ]
+        })}</script>
       </Helmet>
       <section className="section-padding border-b border-border">
         <div className="container-max text-center">
